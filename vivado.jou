@@ -1,0 +1,585 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu Sep 21 22:54:19 2017
+# Process ID: 10976
+# Current directory: D:/ACAProject/Pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11368 D:\ACAProject\Pipeline\Pipeline.xpr
+# Log file: D:/ACAProject/Pipeline/vivado.log
+# Journal file: D:/ACAProject/Pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ACAProject/Pipeline/Pipeline.xpr
+update_compile_order -fileset sources_1update_module_reference {CPU_Mux2to1_1_0 CPU_Mux2to1_2_0 CPU_Mux2to1_3_0}
+generate_target Simulation [get_files D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd]
+export_ip_user_files -of_objects [get_files D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd] -no_script -force -quiet
+launch_simulation
+source CPU_wrapper_tb.tcl
+run 10 ns
+run 10 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_RegFile_0_0
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/RegFile_0}} 
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_RegFile_0_0
+update_module_reference CPU_InstMem_0_0
+relaunch_sim
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/InstMem_0}} 
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 2 ns
+run 2 ns
+run 2 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_InstMem_0_0
+connect_bd_net [get_bd_ports CLK] [get_bd_pins InstMem_0/CLK_I]
+save_bd_design
+relaunch_sim
+restart
+close_sim
+launch_simulation
+source CPU_wrapper_tb.tcl
+run 2 ns
+run 2 ns
+run 2 ns
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/InstMem_0/U0}} 
+restart
+run 2 ns
+run 2 ns
+run 2 ns
+restart
+run 2 ns
+run 2 ns
+run 2 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_RegFile_0_0
+relaunch_sim
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/InstMem_0}} 
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+restart
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_InstMem_0_0
+relaunch_sim
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_InstMem_0_0
+relaunch_sim
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+restart
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_InstMem_0_0
+update_module_reference CPU_RegFile_0_0
+relaunch_sim
+run 1 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_RegFile_0_0
+relaunch_sim
+run 1 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_RegFile_0_0
+relaunch_sim
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_RegFile_0_0
+update_module_reference CPU_InstMem_0_0
+relaunch_sim
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/PCAdder_0}} 
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/ALU_0}} 
+run 2 ns
+run 2 ns
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/DataMem_0}} 
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+restart
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+restart
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/Decoder_0}} 
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/IDEXReg_0}} 
+run 2 ns
+run 2 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+restart
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+relaunch_sim
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+relaunch_sim
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_InstMem_0_0
+update_module_reference CPU_Decoder_0_0
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_compile_order -fileset sources_1
+update_module_reference CPU_PCAdder_0_0
+update_compile_order -fileset sources_1
+update_module_reference CPU_ALU_0_0
+update_module_reference CPU_DataMem_0_0
+update_module_reference CPU_Decoder_0_0
+update_module_reference CPU_PCAdder_0_0
+update_module_reference CPU_SignExtender_0_0
+connect_bd_net [get_bd_pins ALU_0/CLK_I] [get_bd_pins EXMEMReg_0/CLK_I]
+connect_bd_net [get_bd_ports CLK] [get_bd_pins Decoder_0/CLK_I]
+connect_bd_net [get_bd_ports CLK] [get_bd_pins SignExtender_0/CLK_I]
+connect_bd_net [get_bd_ports CLK] [get_bd_pins PCAdder_0/CLK_I]
+save_bd_design
+relaunch_sim
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+close_sim
+launch_simulation
+source CPU_wrapper_tb.tcl
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/EXMEMReg_0}} 
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+delete_bd_objs [get_bd_nets IDEXReg_0_IDEX_MUXRBC_O]
+connect_bd_net [get_bd_pins Mux2to1_2/C_I] [get_bd_pins IDEXReg_0/IDEX_MUXRBC_O]
+connect_bd_net [get_bd_pins EXMEMReg_0/EXMEM_RB_I] [get_bd_pins IDEXReg_0/IDEX_RB_O]
+save_bd_design
+relaunch_sim
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+run 3 ns
+relaunch_sim
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+relaunch_sim
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+relaunch_sim
+relaunch_sim
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+relaunch_sim
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+relaunch_sim
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+relaunch_sim
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+relaunch_sim
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_InstMem_0_0
+update_module_reference CPU_RegFile_0_0
+update_module_reference CPU_DataMem_0_0
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+relaunch_sim
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+update_module_reference CPU_InstMem_0_0
+relaunch_sim
+close_sim
+launch_simulation
+source CPU_wrapper_tb.tcl
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/MEMWBReg_0}} 
+add_wave {{/CPU_wrapper_tb/uut/CPU_i/RegFile_0}} 
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 2 ns
+restart
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+run 2 ns
+open_bd_design {D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/CPU.bd}
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run all
