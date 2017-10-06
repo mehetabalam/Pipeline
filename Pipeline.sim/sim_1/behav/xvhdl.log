@@ -1,0 +1,68 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/SignExtender.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SignExtender
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/RegFile.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RegFile
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/InstMem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity InstMem
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/IFIDReg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity IFIDReg
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/IDEXReg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity IDEXReg
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/EXMEMReg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity EXMEMReg
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/Decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/DataMem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity DataMem
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/PC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/PCAdder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PCAdder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/Mux2to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Mux2to1
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/MEMWBReg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MEMWBReg
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/new/BranchCond.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BranchCond
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_SignExtender_0_0/sim/CPU_SignExtender_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_SignExtender_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_RegFile_0_0/sim/CPU_RegFile_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_RegFile_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_InstMem_0_0/sim/CPU_InstMem_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_InstMem_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_IFIDReg_0_0/sim/CPU_IFIDReg_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_IFIDReg_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_IDEXReg_0_0/sim/CPU_IDEXReg_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_IDEXReg_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_EXMEMReg_0_0/sim/CPU_EXMEMReg_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_EXMEMReg_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_Decoder_0_0/sim/CPU_Decoder_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_Decoder_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_ALU_0_0/sim/CPU_ALU_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_ALU_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_DataMem_0_0/sim/CPU_DataMem_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_DataMem_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_PC_0_0/sim/CPU_PC_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_PC_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/hdl/CPU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_PCAdder_0_0/sim/CPU_PCAdder_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_PCAdder_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_Mux2to1_0_1/sim/CPU_Mux2to1_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_Mux2to1_0_1
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_Mux2to1_1_0/sim/CPU_Mux2to1_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_Mux2to1_1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_Mux2to1_2_0/sim/CPU_Mux2to1_2_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_Mux2to1_2_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_MEMWBReg_0_0/sim/CPU_MEMWBReg_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_MEMWBReg_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_Mux2to1_3_0/sim/CPU_Mux2to1_3_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_Mux2to1_3_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.ip_user_files/bd/CPU/ip/CPU_BranchCond_0_0/sim/CPU_BranchCond_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_BranchCond_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sources_1/bd/CPU/hdl/CPU_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/ACAProject/Pipeline/Pipeline.srcs/sim_1/new/CPU_wrapper_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_wrapper_tb

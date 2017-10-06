@@ -1,0 +1,48 @@
+Vivado Simulator 2016.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.1/bin/unwrapped/win64.o/xelab.exe -wto c1687369d13444b18ba1dc54c79fdcd1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot CPU_wrapper_tb_behav xil_defaultlib.CPU_wrapper_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture cpu_alu_0_0_arch of entity xil_defaultlib.CPU_ALU_0_0 [cpu_alu_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.BranchCond [branchcond_default]
+Compiling architecture cpu_branchcond_0_0_arch of entity xil_defaultlib.CPU_BranchCond_0_0 [cpu_branchcond_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.DataMem [datamem_default]
+Compiling architecture cpu_datamem_0_0_arch of entity xil_defaultlib.CPU_DataMem_0_0 [cpu_datamem_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder [decoder_default]
+Compiling architecture cpu_decoder_0_0_arch of entity xil_defaultlib.CPU_Decoder_0_0 [cpu_decoder_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.EXMEMReg [exmemreg_default]
+Compiling architecture cpu_exmemreg_0_0_arch of entity xil_defaultlib.CPU_EXMEMReg_0_0 [cpu_exmemreg_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.IDEXReg [idexreg_default]
+Compiling architecture cpu_idexreg_0_0_arch of entity xil_defaultlib.CPU_IDEXReg_0_0 [cpu_idexreg_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.IFIDReg [ifidreg_default]
+Compiling architecture cpu_ifidreg_0_0_arch of entity xil_defaultlib.CPU_IFIDReg_0_0 [cpu_ifidreg_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.InstMem [instmem_default]
+Compiling architecture cpu_instmem_0_0_arch of entity xil_defaultlib.CPU_InstMem_0_0 [cpu_instmem_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.MEMWBReg [memwbreg_default]
+Compiling architecture cpu_memwbreg_0_0_arch of entity xil_defaultlib.CPU_MEMWBReg_0_0 [cpu_memwbreg_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux2to1 [mux2to1_default]
+Compiling architecture cpu_mux2to1_0_1_arch of entity xil_defaultlib.CPU_Mux2to1_0_1 [cpu_mux2to1_0_1_default]
+Compiling architecture cpu_mux2to1_1_0_arch of entity xil_defaultlib.CPU_Mux2to1_1_0 [cpu_mux2to1_1_0_default]
+Compiling architecture cpu_mux2to1_2_0_arch of entity xil_defaultlib.CPU_Mux2to1_2_0 [cpu_mux2to1_2_0_default]
+Compiling architecture cpu_mux2to1_3_0_arch of entity xil_defaultlib.CPU_Mux2to1_3_0 [cpu_mux2to1_3_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.PCAdder [pcadder_default]
+Compiling architecture cpu_pcadder_0_0_arch of entity xil_defaultlib.CPU_PCAdder_0_0 [cpu_pcadder_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.PC [pc_default]
+Compiling architecture cpu_pc_0_0_arch of entity xil_defaultlib.CPU_PC_0_0 [cpu_pc_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.RegFile [regfile_default]
+Compiling architecture cpu_regfile_0_0_arch of entity xil_defaultlib.CPU_RegFile_0_0 [cpu_regfile_0_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.SignExtender [signextender_default]
+Compiling architecture cpu_signextender_0_0_arch of entity xil_defaultlib.CPU_SignExtender_0_0 [cpu_signextender_0_0_default]
+Compiling architecture structure of entity xil_defaultlib.CPU [cpu_default]
+Compiling architecture structure of entity xil_defaultlib.CPU_wrapper [cpu_wrapper_default]
+Compiling architecture bench of entity xil_defaultlib.cpu_wrapper_tb
+Built simulation snapshot CPU_wrapper_tb_behav
