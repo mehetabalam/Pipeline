@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep 26 17:32:44 2017" VIVADOVERSION="2016.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="CPU" PACKAGE="csg324" SPEEDGRADE="-3"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="CLK" SIGIS="undef" SIGNAME="External_Ports_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PC_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="MEMWBReg_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="PCAdder_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="DataMem_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="RegFile_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="EXMEMReg_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="BranchCond_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="IDEXReg_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="SignExtender_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="IFIDReg_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="Decoder_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="ALU_0" PORT="CLK_I"/>
+        <CONNECTION INSTANCE="InstMem_0" PORT="CLK_I"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RST" SIGIS="undef" SIGNAME="External_Ports_RST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PC_0" PORT="RST_I"/>
+        <CONNECTION INSTANCE="MEMWBReg_0" PORT="RST_I"/>
+        <CONNECTION INSTANCE="DataMem_0" PORT="RST_I"/>
+        <CONNECTION INSTANCE="RegFile_0" PORT="RST_I"/>
+        <CONNECTION INSTANCE="EXMEMReg_0" PORT="RST_I"/>
+        <CONNECTION INSTANCE="IDEXReg_0" PORT="RST_I"/>
+        <CONNECTION INSTANCE="IFIDReg_0" PORT="RST_I"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/ALU_0" HWVERSION="1.0" INSTANCE="ALU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU" VLNV="xilinx.com:module_ref:ALU:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_ALU_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="OPCODE_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_ALUOP_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_ALUOP_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA1_I" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_1_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_1" PORT="DATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA2_I" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_2_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_2" PORT="DATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="ALU_O" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_ALU_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_ALUOUT_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/BranchCond_0" HWVERSION="1.0" INSTANCE="BranchCond_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BranchCond" VLNV="xilinx.com:module_ref:BranchCond:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_BranchCond_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BC_I" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_BC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_BC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="RA_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_RA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_RA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="RB_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_RB_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MUXBC_O" SIGIS="undef" SIGNAME="BranchCond_0_MUXBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_MUXBC_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/DataMem_0" HWVERSION="1.0" INSTANCE="DataMem_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DataMem" VLNV="xilinx.com:module_ref:DataMem:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_DataMem_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST_I" SIGIS="undef" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="WREN_I" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_DMWEN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_DMWEN_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA_I" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_RB_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="ADD_I" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_ALUOUT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_ALUOUT_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="DATA_O" RIGHT="0" SIGIS="undef" SIGNAME="DataMem_0_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_MEMDATA_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Decoder_0" HWVERSION="1.0" INSTANCE="Decoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Decoder" VLNV="xilinx.com:module_ref:Decoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_Decoder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="OPC_I" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_OPC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_OPC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="RTSEL_I" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_RT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_RT_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="RDSEL_I" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_RD_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_RD_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MUXRAC_O" SIGIS="undef" SIGNAME="Decoder_0_MUXRAC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_MUXRAC_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MUXRBC_O" SIGIS="undef" SIGNAME="Decoder_0_MUXRBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_MUXRBC_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MUXWBC_O" SIGIS="undef" SIGNAME="Decoder_0_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_MUXWBC_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ALUOP_O" RIGHT="0" SIGIS="undef" SIGNAME="Decoder_0_ALUOP_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_ALUOP_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="DMWEN_O" SIGIS="undef" SIGNAME="Decoder_0_DMWEN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_DMWEN_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="WBWREN_O" SIGIS="undef" SIGNAME="Decoder_0_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_WBWREN_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="WBSEL_O" RIGHT="0" SIGIS="undef" SIGNAME="Decoder_0_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_WBSEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BC_O" SIGIS="undef" SIGNAME="Decoder_0_BC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_BC_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/EXMEMReg_0" HWVERSION="1.0" INSTANCE="EXMEMReg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="EXMEMReg" VLNV="xilinx.com:module_ref:EXMEMReg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_EXMEMReg_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST_I" SIGIS="undef" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="EXMEM_WBSEL_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_WBSEL_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EXMEM_MUXWBC_I" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_MUXWBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EXMEM_DMWEN_I" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_DMWEN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_DMWEN_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EXMEM_WBWREN_I" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_WBWREN_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="EXMEM_ALUOUT_I" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_ALU_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="ALU_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="EXMEM_RB_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_RB_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EXMEM_MUXBC_I" SIGIS="undef" SIGNAME="BranchCond_0_MUXBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BranchCond_0" PORT="MUXBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="EXMEM_WBSEL_O" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_WBSEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="EXMEM_MUXWBC_O" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_MUXWBC_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="EXMEM_DMWEN_O" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_DMWEN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataMem_0" PORT="WREN_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="EXMEM_WBWREN_O" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_WBWREN_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="EXMEM_ALUOUT_O" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_ALUOUT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_ALUOUT_I"/>
+            <CONNECTION INSTANCE="DataMem_0" PORT="ADD_I"/>
+            <CONNECTION INSTANCE="Mux2to1_0" PORT="DATA2_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="EXMEM_RB_O" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataMem_0" PORT="DATA_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="EXMEM_MUXBC_O" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_MUXBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_0" PORT="C_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/IDEXReg_0" HWVERSION="1.0" INSTANCE="IDEXReg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="IDEXReg" VLNV="xilinx.com:module_ref:IDEXReg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_IDEXReg_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST_I" SIGIS="undef" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="IDEX_RA_I" RIGHT="0" SIGIS="undef" SIGNAME="RegFile_0_RA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RegFile_0" PORT="RA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="IDEX_RB_I" RIGHT="0" SIGIS="undef" SIGNAME="RegFile_0_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RegFile_0" PORT="RB_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="IDEX_WBSEL_I" RIGHT="0" SIGIS="undef" SIGNAME="Decoder_0_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="WBSEL_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IDEX_MUXRAC_I" SIGIS="undef" SIGNAME="Decoder_0_MUXRAC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="MUXRAC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IDEX_MUXRBC_I" SIGIS="undef" SIGNAME="Decoder_0_MUXRBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="MUXRBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IDEX_MUXWBC_I" SIGIS="undef" SIGNAME="Decoder_0_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="MUXWBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="IDEX_ALUOP_I" RIGHT="0" SIGIS="undef" SIGNAME="Decoder_0_ALUOP_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="ALUOP_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IDEX_DMWEN_I" SIGIS="undef" SIGNAME="Decoder_0_DMWEN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="DMWEN_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IDEX_WBWREN_I" SIGIS="undef" SIGNAME="Decoder_0_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="WBWREN_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="IDEX_IMM32_I" RIGHT="0" SIGIS="undef" SIGNAME="SignExtender_0_IMM32_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SignExtender_0" PORT="IMM32_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="IDEX_NPC_I" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_NPC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_NPC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IDEX_BC_I" SIGIS="undef" SIGNAME="Decoder_0_BC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="BC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="IDEX_RA_O" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_RA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BranchCond_0" PORT="RA_I"/>
+            <CONNECTION INSTANCE="Mux2to1_1" PORT="DATA1_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="IDEX_RB_O" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_RB_I"/>
+            <CONNECTION INSTANCE="BranchCond_0" PORT="RB_I"/>
+            <CONNECTION INSTANCE="Mux2to1_2" PORT="DATA1_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="IDEX_WBSEL_O" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_WBSEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IDEX_MUXRAC_O" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_MUXRAC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_1" PORT="C_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IDEX_MUXRBC_O" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_MUXRBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_2" PORT="C_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IDEX_MUXWBC_O" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_MUXWBC_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="IDEX_ALUOP_O" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_ALUOP_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="OPCODE_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IDEX_DMWEN_O" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_DMWEN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_DMWEN_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IDEX_WBWREN_O" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_WBWREN_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="IDEX_IMM32_O" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_IMM32_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_2" PORT="DATA2_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="IDEX_NPC_O" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_NPC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_1" PORT="DATA2_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IDEX_BC_O" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_BC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="BranchCond_0" PORT="BC_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/IFIDReg_0" HWVERSION="1.0" INSTANCE="IFIDReg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="IFIDReg" VLNV="xilinx.com:module_ref:IFIDReg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_IFIDReg_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST_I" SIGIS="undef" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="IFID_NPC_I" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_0_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_0" PORT="DATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="IFID_IR_I" RIGHT="0" SIGIS="undef" SIGNAME="InstMem_0_IR_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="InstMem_0" PORT="IR_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="IFID_NPC_O" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_NPC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_NPC_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="IFID_RS_O" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_RS_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RegFile_0" PORT="RASEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="IFID_RT_O" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_RT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RegFile_0" PORT="RBSEL_I"/>
+            <CONNECTION INSTANCE="Decoder_0" PORT="RTSEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="IFID_RD_O" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_RD_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="RDSEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="IFID_OPC_O" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_OPC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Decoder_0" PORT="OPC_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="IFID_IMM_O" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_IMM_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SignExtender_0" PORT="IMM16_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/InstMem_0" HWVERSION="1.0" INSTANCE="InstMem_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="InstMem" VLNV="xilinx.com:module_ref:InstMem:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_InstMem_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="PC_I" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="IR_O" RIGHT="0" SIGIS="undef" SIGNAME="InstMem_0_IR_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_IR_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/MEMWBReg_0" HWVERSION="1.0" INSTANCE="MEMWBReg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MEMWBReg" VLNV="xilinx.com:module_ref:MEMWBReg:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_MEMWBReg_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST_I" SIGIS="undef" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MEMWB_MUXWBC_I" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_MUXWBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="MEMWB_MEMDATA_I" RIGHT="0" SIGIS="undef" SIGNAME="DataMem_0_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DataMem_0" PORT="DATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MEMWB_WBWREN_I" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_WBWREN_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="MEMWB_WBSEL_I" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_WBSEL_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="MEMWB_ALUOUT_I" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_ALUOUT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_ALUOUT_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MEMWB_MUXWBC_O" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_3" PORT="C_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="MEMWB_MEMDATA_O" RIGHT="0" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_MEMDATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_3" PORT="DATA2_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MEMWB_WBWREN_O" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RegFile_0" PORT="WEN_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="MEMWB_WBSEL_O" RIGHT="0" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RegFile_0" PORT="WSEL_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="MEMWB_ALUOUT_O" RIGHT="0" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_ALUOUT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_3" PORT="DATA1_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2to1_0" HWVERSION="1.0" INSTANCE="Mux2to1_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2to1" VLNV="xilinx.com:module_ref:Mux2to1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_Mux2to1_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="DATA1_I" RIGHT="0" SIGIS="undef" SIGNAME="PCAdder_0_PCPLUS4_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PCAdder_0" PORT="PCPLUS4_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA2_I" RIGHT="0" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_ALUOUT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_ALUOUT_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="C_I" SIGIS="undef" SIGNAME="EXMEMReg_0_EXMEM_MUXBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EXMEMReg_0" PORT="EXMEM_MUXBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="DATA_O" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_0_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_I"/>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_NPC_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2to1_1" HWVERSION="1.0" INSTANCE="Mux2to1_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2to1" VLNV="xilinx.com:module_ref:Mux2to1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_Mux2to1_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="DATA1_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_RA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_RA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA2_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_NPC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_NPC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="C_I" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_MUXRAC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_MUXRAC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="DATA_O" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_1_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="DATA1_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2to1_2" HWVERSION="1.0" INSTANCE="Mux2to1_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2to1" VLNV="xilinx.com:module_ref:Mux2to1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_Mux2to1_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="DATA1_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_RB_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA2_I" RIGHT="0" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_IMM32_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_IMM32_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="C_I" SIGIS="undef" SIGNAME="IDEXReg_0_IDEX_MUXRBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_MUXRBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="DATA_O" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_2_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="DATA2_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/Mux2to1_3" HWVERSION="1.0" INSTANCE="Mux2to1_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2to1" VLNV="xilinx.com:module_ref:Mux2to1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_Mux2to1_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="DATA1_I" RIGHT="0" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_ALUOUT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_ALUOUT_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA2_I" RIGHT="0" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_MEMDATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_MEMDATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="C_I" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_MUXWBC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_MUXWBC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="DATA_O" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_3_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RegFile_0" PORT="WDATA_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PCAdder_0" HWVERSION="1.0" INSTANCE="PCAdder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PCAdder" VLNV="xilinx.com:module_ref:PCAdder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_PCAdder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="PC_I" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="PCPLUS4_O" RIGHT="0" SIGIS="undef" SIGNAME="PCAdder_0_PCPLUS4_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_0" PORT="DATA1_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/PC_0" HWVERSION="1.0" INSTANCE="PC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PC" VLNV="xilinx.com:module_ref:PC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_PC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST_I" SIGIS="undef" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="PC_I" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_0_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_0" PORT="DATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="PC_O" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PCAdder_0" PORT="PC_I"/>
+            <CONNECTION INSTANCE="InstMem_0" PORT="PC_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/RegFile_0" HWVERSION="1.0" INSTANCE="RegFile_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RegFile" VLNV="xilinx.com:module_ref:RegFile:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_RegFile_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST_I" SIGIS="undef" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="WEN_I" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_WBWREN_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_WBWREN_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="WSEL_I" RIGHT="0" SIGIS="undef" SIGNAME="MEMWBReg_0_MEMWB_WBSEL_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEMWBReg_0" PORT="MEMWB_WBSEL_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="WDATA_I" RIGHT="0" SIGIS="undef" SIGNAME="Mux2to1_3_DATA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2to1_3" PORT="DATA_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="RASEL_I" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_RS_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_RS_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="RBSEL_I" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_RT_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_RT_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="RA_O" RIGHT="0" SIGIS="undef" SIGNAME="RegFile_0_RA_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_RA_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="RB_O" RIGHT="0" SIGIS="undef" SIGNAME="RegFile_0_RB_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_RB_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/SignExtender_0" HWVERSION="1.0" INSTANCE="SignExtender_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SignExtender" VLNV="xilinx.com:module_ref:SignExtender:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CPU_SignExtender_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_I" SIGIS="undef" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="IMM16_I" RIGHT="0" SIGIS="undef" SIGNAME="IFIDReg_0_IFID_IMM_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IFIDReg_0" PORT="IFID_IMM_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="IMM32_O" RIGHT="0" SIGIS="undef" SIGNAME="SignExtender_0_IMM32_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IDEXReg_0" PORT="IDEX_IMM32_I"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

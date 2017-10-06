@@ -1,0 +1,79 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port RST -pg 1 -y 190 -defaultsOSRD
+preplace port CLK -pg 1 -y 170 -defaultsOSRD
+preplace inst RegFile_0 -pg 1 -lvl 6 -y 140 -defaultsOSRD
+preplace inst EXMEMReg_0 -pg 1 -lvl 10 -y 360 -defaultsOSRD
+preplace inst IFIDReg_0 -pg 1 -lvl 5 -y 370 -defaultsOSRD
+preplace inst SignExtender_0 -pg 1 -lvl 6 -y 600 -defaultsOSRD
+preplace inst DataMem_0 -pg 1 -lvl 11 -y 380 -defaultsOSRD
+preplace inst PC_0 -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace inst IDEXReg_0 -pg 1 -lvl 7 -y 400 -defaultsOSRD
+preplace inst PCAdder_0 -pg 1 -lvl 2 -y 180 -defaultsOSRD
+preplace inst Mux2to1_0 -pg 1 -lvl 3 -y 200 -defaultsOSRD
+preplace inst Mux2to1_1 -pg 1 -lvl 8 -y 330 -defaultsOSRD
+preplace inst ALU_0 -pg 1 -lvl 9 -y 320 -defaultsOSRD
+preplace inst Mux2to1_2 -pg 1 -lvl 8 -y 500 -defaultsOSRD
+preplace inst Mux2to1_3 -pg 1 -lvl 13 -y 170 -defaultsOSRD
+preplace inst Decoder_0 -pg 1 -lvl 6 -y 440 -defaultsOSRD
+preplace inst InstMem_0 -pg 1 -lvl 2 -y 280 -defaultsOSRD
+preplace inst MEMWBReg_0 -pg 1 -lvl 12 -y 230 -defaultsOSRD
+preplace inst BranchCond_0 -pg 1 -lvl 9 -y 120 -defaultsOSRD
+preplace netloc EXMEMReg_0_EXMEM_MUXBC_O 1 2 9 460 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 3470
+preplace netloc CLK_1 1 0 12 -110 100 150 340 NJ 340 N 340 1000 270 1460 270 2050 210 NJ 210 2770 230 3080 230 3520 170 NJ
+preplace netloc MEMWBReg_0_MEMWB_WBEN_O 1 5 8 1510 30 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 NJ 40 4220
+preplace netloc Decoder_0_DMWEN_O 1 6 1 N
+preplace netloc Decoder_0_WBSEL_O 1 6 1 2030
+preplace netloc MEMWBReg_0_MEMWB_WBSEL_O 1 5 8 1500 260 NJ 190 NJ 190 NJ 200 NJ 120 NJ 120 NJ 120 4210
+preplace netloc EXMEMReg_0_EXMEM_RB_O 1 10 1 N
+preplace netloc IDEXReg_0_IDEX_DMWEN_O 1 7 3 NJ 420 NJ 420 NJ
+preplace netloc IDEXReg_0_IDEX_NPC_O 1 7 1 2470
+preplace netloc IDEXReg_0_IDEX_MUXRAC_O 1 7 1 N
+preplace netloc Decoder_0_MUXWBC_O 1 6 1 N
+preplace netloc IDEXReg_0_IDEX_BC_O 1 7 2 2430 110 NJ
+preplace netloc IDEXReg_0_IDEX_MUXWBC_O 1 7 3 NJ 400 NJ 400 NJ
+preplace netloc IDEXReg_0_IDEX_IMM32_O 1 7 1 2400
+preplace netloc Mux2to1_0_DATA_O 1 0 5 -90 90 NJ 90 NJ 90 740 200 990
+preplace netloc Decoder_0_ALUOP_O 1 6 1 N
+preplace netloc Decoder_0_BC_O 1 6 1 2000
+preplace netloc DataMem_0_DATA_O 1 11 1 3790
+preplace netloc IDEXReg_0_IDEX_MUXRBC_O 1 7 1 2410
+preplace netloc MEMWBReg_0_MEMWB_ALUOUT_O 1 12 1 4230
+preplace netloc MEMWBReg_0_MEMWB_MEMDATA_O 1 12 1 4240
+preplace netloc EXMEMReg_0_EXMEM_MUXWBC_O 1 10 2 3490 210 NJ
+preplace netloc IFIDReg_0_IFID_RD_O 1 5 1 1450
+preplace netloc ALU_0_ALU_O 1 9 1 3050
+preplace netloc IDEXReg_0_IDEX_RA_O 1 7 2 2470 130 NJ
+preplace netloc RegFile_0_RB_O 1 6 1 2030
+preplace netloc IDEXReg_0_IDEX_ALUOP_O 1 7 2 2420 260 NJ
+preplace netloc BranchCond_0_MUXBC_O 1 9 1 3060
+preplace netloc Mux2to1_1_DATA_O 1 8 1 N
+preplace netloc IFIDReg_0_IFID_RS_O 1 5 1 1470
+preplace netloc IFIDReg_0_IFID_IMM_O 1 5 1 1440
+preplace netloc IDEXReg_0_IDEX_WBSEL_O 1 7 3 2410 240 NJ 240 NJ
+preplace netloc IFIDReg_0_IFID_RT_O 1 5 1 1490
+preplace netloc EXMEMReg_0_EXMEM_ALUOUT_O 1 2 10 450 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 3480 290 NJ
+preplace netloc EXMEMReg_0_EXMEM_DMWEN_O 1 10 1 3500
+preplace netloc IFIDReg_0_IFID_NPC_O 1 5 2 NJ 320 NJ
+preplace netloc InstMem_0_IR_O 1 2 3 NJ 280 N 280 980
+preplace netloc EXMEMReg_0_EXMEM_WBWREN_O 1 10 2 3510 250 NJ
+preplace netloc IDEXReg_0_IDEX_WBWREN_O 1 7 3 NJ 430 NJ 430 NJ
+preplace netloc MEMWBReg_0_MEMWB_WBDATA_O 1 5 9 1510 250 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 4500
+preplace netloc Mux2to1_2_DATA_O 1 8 1 2770
+preplace netloc IDEXReg_0_IDEX_RB_O 1 7 3 2450 410 2750 410 NJ
+preplace netloc RST_1 1 0 12 -100 120 NJ 120 NJ 120 N 120 1010 120 1480 280 2060 220 NJ 220 NJ 220 3090 220 3530 190 NJ
+preplace netloc PCAdder_0_PCPLUS4_O 1 2 1 N
+preplace netloc RegFile_0_RA_O 1 6 1 2040
+preplace netloc SignExtender_0_IMM32_O 1 6 1 2050
+preplace netloc IFIDReg_0_IFID_OPC_O 1 5 1 1470
+preplace netloc MEMWBReg_0_MEMWB_MUXWBC_O 1 12 1 N
+preplace netloc EXMEMReg_0_EXMEM_RBSEL_O 1 10 2 3500 270 NJ
+preplace netloc Decoder_0_WBWREN_O 1 6 1 N
+preplace netloc Decoder_0_MUXRBC_O 1 6 1 N
+preplace netloc Decoder_0_MUXRAC_O 1 6 1 N
+preplace netloc PC_0_PC_O 1 1 1 160
+levelinfo -pg 1 -130 30 320 610 960 1290 1860 2230 2610 2900 3280 3660 4000 4370 4520 -top 0 -bot 930
+",
+}
+0
